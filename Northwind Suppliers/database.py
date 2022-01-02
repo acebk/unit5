@@ -5,8 +5,8 @@ def query(query_text):
     cur = conn.cursor()
     cur.execute(query_text)
     rows = cur.fetchall()
-    return rows
     conn.close()
+    return rows
 
 def get_all_facts():
     return query(""" SELECT * FROM Supplier """)
